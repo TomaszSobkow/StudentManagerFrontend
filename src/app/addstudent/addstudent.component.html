@@ -1,0 +1,65 @@
+<body>
+  <div >
+      <h3 class = " text-center">{{ title }}</h3>
+      <form (ngSubmit) = "onSubmit()" >
+
+        <div class="row">
+          <div class = " col form-group  mb-3">
+            <label>First Name</label>
+            <i class="fa fa-user-tie" ></i>
+            <input type = "text"  class = "form-control " id = "firstName"
+              [(ngModel)] = "student.firstName" name = "firstName">
+          </div>
+
+          <div class = " col form-group  mb-3 ">
+              <label>Last Name</label>
+              <i class="fa fa-user" ></i>
+              <input type = "text" class = "form-control"  id = "LastName"
+                [(ngModel)] = "student.lastName" name = "LastName">
+          </div>
+
+          <div class = " col form-group  mb-3">
+            <label>Email</label>
+            <i class="fa fa-envelope" ></i>
+            <input type = "text" class = "form-control"  id = "emailId"
+              [(ngModel)] = "student.email" name = "emailId">
+          </div>
+
+          <div class = " col form-group  mb-3">
+            <label>Phone</label>
+            <i class="fa fa-phone" ></i>
+            <input type = "text" class = "form-control"  id = "phone"
+              [(ngModel)] = "student.phone" name = "phone">
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class = " col form-group  mb-3">
+            <label>County</label>
+            <i class="fa fa-globe" ></i>
+            <input type = "text"  class = "form-control " id = "county"
+              [(ngModel)] = "student.county" name = "county">
+          </div>
+
+          <div class = " col form-group  mb-3 ">
+              <label>Town</label>
+              <i class="fa fa-home" ></i>
+              <input type = "text" class = "form-control"  id = "town"
+                [(ngModel)] = "student.town" name = "town">
+          </div>
+
+          <div class = " col form-group  mb-3">
+            <label>Address</label>
+            <i class="fa fa-landmark" ></i>
+            <input type = "text" class = "form-control"  id = "address"
+              [(ngModel)] = "student.address" name = "address">
+          </div>
+
+        </div>
+      <button class="btn btn-secondary" id = "btnadd"  type="submit" >Add Student</button>
+
+  </form>
+</div>
+ 
+</body>
