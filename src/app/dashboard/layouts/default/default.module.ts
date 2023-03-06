@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 import { DefaultComponent } from './default.component';
 import { UpdatestudentComponent } from 'src/app/updatestudent/updatestudent.component';
 import { FormsModule } from '@angular/forms';
+import { FooterComponent } from 'src/app/footer/footer.component';
 
 
 
@@ -20,8 +21,7 @@ import { FormsModule } from '@angular/forms';
     AddstudentComponent,
     UpdatestudentComponent,
     ListofstudentsComponent,
-    
-
+    FooterComponent
     
   ],
   imports: [

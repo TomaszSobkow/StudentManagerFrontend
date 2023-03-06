@@ -1,4 +1,4 @@
-import { FooterComponent } from './footer/footer.component';
+
 import { DefaultModule } from './dashboard/layouts/default/default.module';
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -19,7 +19,7 @@ import { RegisterService } from './services/register.service';
     AppComponent,
     SignupComponent,
     RegisterComponent,
-    FooterComponent
+  
      
    ],
   imports: [
