@@ -18,7 +18,7 @@ const routes: Routes = [
      children :[
        { path:'', component: DashboardComponent  },
        { path: 'students', component: ListofstudentsComponent},
-       { path: 'students/updatestudent/:id', component: UpdatestudentComponent },
+       { path: 'students/student/:id', component: UpdatestudentComponent },
        { path: 'addstudent', component: AddstudentComponent }
       ]},
   ];

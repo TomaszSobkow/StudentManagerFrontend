@@ -8,29 +8,29 @@ import { UserSQL } from '../users/userSQL';
 })
 export class UsersService {
 
-  private url  = "http://192.168.178.63:8080/api/students";
+  private url  = "http://192.168.178.63:8080/api/users";
 
 
   constructor( private httpClient: HttpClient){ }
 
-  getStudentsList(): Observable<UserSQL[]>{
+  getUsersList(): Observable<UserSQL[]>{
     return this.httpClient.get<UserSQL[]>(this.url);
   }
 
-  createStudent(user: UserSQL): Observable<Object>{
+  createUser(user: UserSQL): Observable<Object>{
     return this.httpClient.post(this.url, user);
   }
 
-  getStudentById(id: number): Observable<UserSQL>{
+  getUserById(id: number): Observable<UserSQL>{
     return this.httpClient.get<UserSQL>(`${this.url}/${id}`);
 
   }
 
-  deleteStudent(id: number): Observable<UserSQL>{
+  deleteUser(id: number): Observable<UserSQL>{
     return this.httpClient.delete<UserSQL>(`${this.url}/${id}`)
   }
 
-  updateStudent(id: number, user: UserSQL): Observable<Object>{
+  updateUser(id: number, user: UserSQL): Observable<Object>{
     return this.httpClient.put(`${this.url}/${id}`,user)
   }
 }

@@ -13,6 +13,7 @@ import { RegisterComponent } from './authentication/register/register.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterService } from './services/register.service';
 import { NewRegisterComponent } from './authentication/new-register/new-register.component';
+import { ListofusersComponent } from './users/listofusers/listofusers.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { NewRegisterComponent } from './authentication/new-register/new-register
     SignupComponent,
     RegisterComponent,
     NewRegisterComponent,
+    ListofusersComponent,
   
      
    ],

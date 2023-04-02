@@ -40,6 +40,10 @@ export class UpdatestudentComponent implements OnInit {
     })
   }
 
+  cancel(){
+  this.goToStudentsList();
+  }
+
 
   ngOnInit(): void {
 

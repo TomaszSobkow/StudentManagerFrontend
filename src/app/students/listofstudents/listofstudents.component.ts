@@ -23,7 +23,7 @@ export class ListofstudentsComponent implements OnInit {
   }
 
   getStudentDetails(id: number){
-    this.router.navigate(['defaultComponent/students/updatestudent', id])
+    this.router.navigate(['defaultComponent/students/student', id])
   }
 
   ngOnInit(): void {

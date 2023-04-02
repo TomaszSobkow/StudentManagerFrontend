@@ -30,6 +30,10 @@ export class AddstudentComponent implements OnInit {
     this.router.navigate(['defaultComponent/students']);
   }
 
+  cancel(){
+    this.goToStudentsList();
+  }
+
    onSubmit(){
     this.saveStudent();
     this.confirmation();
