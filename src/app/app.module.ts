@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterService } from './services/register.service';
 import { NewRegisterComponent } from './authentication/new-register/new-register.component';
 import { ListofusersComponent } from './users/listofusers/listofusers.component';
+import { UpdateuserComponent } from './users/updateuser/updateuser.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { ListofusersComponent } from './users/listofusers/listofusers.component'
     RegisterComponent,
     NewRegisterComponent,
     ListofusersComponent,
+    UpdateuserComponent,
   
      
    ],

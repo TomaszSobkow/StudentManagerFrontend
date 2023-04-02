@@ -28,7 +28,7 @@ export class ListofusersComponent implements OnInit {
   }
 
   getUsersDetails(id: number){
-
+      this.router.navigate(['defaultComponent/users/user', id],)
   }
 
 
