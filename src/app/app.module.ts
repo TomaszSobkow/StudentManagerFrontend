@@ -12,6 +12,7 @@ import { SignupComponent } from './authentication/signup/signup.component';
 import { RegisterComponent } from './authentication/register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterService } from './services/register.service';
+import { NewRegisterComponent } from './authentication/new-register/new-register.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { RegisterService } from './services/register.service';
     AppComponent,
     SignupComponent,
     RegisterComponent,
+    NewRegisterComponent,
   
      
    ],

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Student } from '../student';
+import { Student } from '../students/student';
 
 
 
@@ -10,7 +10,7 @@ import { Student } from '../student';
 })
 export class StudentService {
 
- private url  = "http://192.168.178.100:8080/api/sm/students";
+ private url  = "http://192.168.178.63:8080/api/students";
 
 
   constructor( private httpClient: HttpClient){ }

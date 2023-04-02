@@ -2,11 +2,11 @@
 import { DefaultComponent } from './dashboard/layouts/default/default.component';
 import { RegisterComponent } from './authentication/register/register.component';
 import { SignupComponent } from './authentication/signup/signup.component';
-import { UpdatestudentComponent } from './updatestudent/updatestudent.component';
-import { ListofstudentsComponent } from './listofstudents/listofstudents.component';
+import { UpdatestudentComponent } from './students/updatestudent/updatestudent.component';
+import { ListofstudentsComponent } from './students/listofstudents/listofstudents.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AddstudentComponent } from './addstudent/addstudent.component';
+import { AddstudentComponent } from './students/addstudent/addstudent.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
