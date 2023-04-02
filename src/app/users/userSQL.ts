@@ -4,5 +4,5 @@ export class UserSQL{
 
     email:         string = "";
     password:      string = "";
-    isAdmin?:      boolean;
+    isAdmin:         string = "";
 }
