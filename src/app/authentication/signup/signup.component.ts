@@ -13,6 +13,7 @@ export class SignupComponent implements OnInit {
 
   providedUser = '';
   providedPassword =  '';
+  
 
   registeredUsers = Array<User>();
 

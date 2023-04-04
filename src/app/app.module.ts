@@ -15,6 +15,7 @@ import { RegisterService } from './services/register.service';
 import { NewRegisterComponent } from './authentication/new-register/new-register.component';
 import { ListofusersComponent } from './users/listofusers/listofusers.component';
 import { UpdateuserComponent } from './users/updateuser/updateuser.component';
+import { NewsignupComponent } from './authentication/newsignup/newsignup.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { UpdateuserComponent } from './users/updateuser/updateuser.component';
     NewRegisterComponent,
     ListofusersComponent,
     UpdateuserComponent,
+    NewsignupComponent,
   
      
    ],
