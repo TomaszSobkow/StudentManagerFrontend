@@ -22,7 +22,7 @@ export class UpdateuserComponent implements OnInit {
 
   onSubmit(){
     this.updateUser();
-    window.alert('Edited stUserudent ' + this.user.email+ ' ' +this.user.password)
+    window.alert('Edited stUserudent ' + this.user.login+ ' ' +this.user.password)
     this.goToStudentsList();
   };
 
@@ -35,7 +35,7 @@ export class UpdateuserComponent implements OnInit {
   deleteUser(id : number){
     this.userService.deleteUser(id).subscribe(data => {
 
-      window.alert('Deleted Student ID'+this.user.id +' '+this.user.email + ' ' +this.user.password);
+      window.alert('Deleted Student ID'+this.user.id +' '+this.user.login + ' ' +this.user.password);
       this.goToStudentsList();
     })
   }

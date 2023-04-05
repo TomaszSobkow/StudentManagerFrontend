@@ -18,6 +18,7 @@ import { UpdateuserComponent } from './users/updateuser/updateuser.component';
 import { NewsignupComponent } from './authentication/newsignup/newsignup.component';
 
 
+
 @NgModule({
   declarations: [	
     AppComponent,
@@ -26,9 +27,7 @@ import { NewsignupComponent } from './authentication/newsignup/newsignup.compone
     NewRegisterComponent,
     ListofusersComponent,
     UpdateuserComponent,
-    NewsignupComponent,
-  
-     
+    NewsignupComponent,   
    ],
   imports: [
     BrowserModule,
