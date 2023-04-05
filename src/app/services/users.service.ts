@@ -18,7 +18,8 @@ export class UsersService {
   }
 
   createUser(user: UserSQL): Observable<Object>{
-    return this.httpClient.post(this.url, user);
+    console.log('New USER ' +user.login+ "-"+ user.password+ '----'+ user);
+    return this.httpClient.post(this.url,user);
   }
 
   getUserById(id: number): Observable<UserSQL>{

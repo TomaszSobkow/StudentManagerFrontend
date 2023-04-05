@@ -10,66 +10,61 @@ import { UserSQL } from 'src/app/users/userSQL';
 })
 export class NewRegisterComponent implements OnInit {
 
-  
+  private isLogin = false;
+  private isPassword= false;
   passwordConfirmation = '';
-  private  isPassword = false;
+  private isPasswordConfirmation = false;
  
   user: UserSQL = new UserSQL();
   private allUsers: UserSQL[] = [];
 
-
   constructor(private userService: UsersService, private router: Router) { }
 
   register(){
-    console.log('User ' + this.user.login)
-    console.log('User ' + this.user.password)
-    console.log('User ' + this.user.id)
-    
-    
     this.dataValidation();
-    console.log('Pasword validation is '+ this.isPassword)
-    if(this.isPassword){
+    if(this.isLogin && this.isPassword && this.isPasswordConfirmation){
       this.checkUser();
     }else{
       window.alert("CLICKED")
     }
-    
-  
   }
-
-  checkUser(){  
-    for(var i = 0; i < this.allUsers.length; i++){
-      console.log('Inside checkUser METHOD ' + this.allUsers[i].login);
-      if(this.allUsers[i].login !== this.user.login){
-         this.createNewUser(this.user);
-        console.log('New USER- ' + this.user.login + '-' + this.user.password)
-      }else{
-        window.alert("The user " + this.user.login + "Alredy exists")
-      }
-    }
-  }
-
 
   dataValidation() {
-    if (this.user.login === '') {
-      window.alert('Login can not be Empty !');
-    }
-
-    if (this.user.password === '') {
-      window.alert('Password can not be empty!');
-    }
-
-    if (this.user.password != this.passwordConfirmation) {
-      window.alert('Passwords are not the same ');
+    if (this.user.login != ''){
+      if (this.user.password != ''){
+        if (this.user.password === this.passwordConfirmation) {
+            this.isLogin = true;
+            this.isPassword = true;
+            this.isPasswordConfirmation = true;
+        }else{
+          window.alert('Passwords are not the same ');
+        }
+      }else{
+        window.alert('Password can not be empty!');
+      }
     }else{
-      console.log('Password is true');
-      this.isPassword = true;
+      window.alert('Login can not be Empty !');}
     }
-  }
 
-  createNewUser(newUser: UserSQL ){
+  checkUser(){  
+    let ifUserExists = true
+      for(var i = 0; i < this.allUsers.length; i++){
+          if(this.allUsers[i].login === this.user.login){
+              window.alert("The user " + this.user.login + " alredy exists")
+              ifUserExists = false;
+              break;
+            }
+      }
+
+      if(ifUserExists){
+          console.log('ifUserExists = '+ ifUserExists)
+          this.createNewUser();
+      }
+}
+     
+  createNewUser( ){
     console.log('In Method createNewUser')
-    this.userService.createUser(newUser).subscribe( data =>{
+    this.userService.createUser(this.user).subscribe( data =>{
       window.alert("User " + this.user.login+ "Created"),
       this.router.navigate([''])
     },
@@ -77,8 +72,8 @@ export class NewRegisterComponent implements OnInit {
   }
 
   getAllUsers(){
-    this.userService.getUsersList().subscribe(user => {
-      this.allUsers = user;
+    this.userService.getUsersList().subscribe(data => {
+      this.allUsers = data;
     })
   }
 
