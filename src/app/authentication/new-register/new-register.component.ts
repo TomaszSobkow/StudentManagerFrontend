@@ -62,7 +62,7 @@ export class NewRegisterComponent implements OnInit {
   createNewUser( ){
     this.userService.createUser(this.user).subscribe( data =>{
       window.alert("User " + this.user.login+ " Created"),
-      this.router.navigate([''])
+      this.router.navigate(['/'])
     },
     error => window.alert(error));
   }

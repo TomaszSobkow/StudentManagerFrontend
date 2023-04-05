@@ -15,11 +15,9 @@ import { NewsignupComponent } from './authentication/newsignup/newsignup.compone
 
 const routes: Routes = [
 
-  { path:'', redirectTo:(`${'signup/new'}`), pathMatch:'full' },
-  { path: 'signup', component: SignupComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: 'register/new', component: NewRegisterComponent},
-  { path: 'signup/new', component: NewsignupComponent},
+  { path:'', redirectTo:(`${'signup'}`), pathMatch:'full' },
+  { path: 'register', component: NewRegisterComponent},
+  { path: 'signup', component: NewsignupComponent},
   { path: 'defaultComponent', component: DefaultComponent,
      children :[
        { path:'', component: DashboardComponent  },

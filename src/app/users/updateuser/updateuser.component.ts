@@ -22,7 +22,7 @@ export class UpdateuserComponent implements OnInit {
 
   onSubmit(){
     this.updateUser();
-    window.alert('Edited stUserudent ' + this.user.login+ ' ' +this.user.password)
+    window.alert('Edited Student ' + this.user.login);
     this.goToStudentsList();
   };
 

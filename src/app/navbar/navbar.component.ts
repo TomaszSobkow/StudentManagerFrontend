@@ -11,8 +11,9 @@ export class NavbarComponent implements OnInit {
   constructor(private router: Router) { }
 
   onSubmit(){
+    window.alert('signed out!!!!!!!!!!!');
     this.router.navigate(['/signup'])
-    window.alert('signed out');
+    
   }
 
   ngOnInit(): void {
