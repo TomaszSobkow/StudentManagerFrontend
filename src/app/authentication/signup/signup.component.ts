@@ -14,7 +14,6 @@ export class SignupComponent implements OnInit {
   providedUser = '';
   providedPassword =  '';
   
-
   registeredUsers = Array<User>();
 
   isLoginCorrect : boolean = false;
@@ -22,7 +21,6 @@ export class SignupComponent implements OnInit {
   constructor( private router: Router, private registerService: RegisterService) { }
  
   onSubmit(){
-    
     for(let i = 0; i < this.registeredUsers.length; i++){
       if(this.registeredUsers[i].name === (this.providedUser) &&
         (this.registeredUsers[i].password === (this.providedPassword))){

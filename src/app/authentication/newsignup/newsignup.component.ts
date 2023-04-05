@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 import { UsersService } from 'src/app/services/users.service';
 import { UserSQL } from 'src/app/users/userSQL';
 
@@ -10,37 +10,47 @@ import { UserSQL } from 'src/app/users/userSQL';
 })
 export class NewsignupComponent implements OnInit {
 
-  private login = '';
-  private password = '';
-  private passwordConfirmation = '';
+  private isDataValid: boolean = false;
+  private isUserFound: boolean = false;
 
-  private isNameCorrect: boolean = false;
-  private isPasswordCorret: boolean = false;
-
-  private user: UserSQL = new UserSQL();
-
+  user: UserSQL = new UserSQL();
 
   private allUsers: UserSQL[] = [];
 
-  constructor( private userService: UsersService) { }
+  constructor( private userService: UsersService, private router: Router) { }
 
-  validateName() {
-    if (this.user.  login === '') {
-      window.alert('The Login can not be Empty !');
-    } else {
-      this.isNameCorrect = true;
+
+  login() {
+    this.dataValidation();
+    if(this.isDataValid){
+        this.checkUser();
     }
   }
 
-  validatePassword() {
-    if (this.password != this.passwordConfirmation) {
-      window.alert('Passwords are not the same ');
+  dataValidation() {
+    if (this.user.login != ''){
+      if (this.user.password != ''){
+          this.isDataValid = true;
+        }else{ window.alert('Password can not be empty!');}
+      }else{
+        window.alert('Login can not be Empty !');}
+  }
+  
+  checkUser(){
+    for(let i = 0; i < this.allUsers.length; i++){
+      if(this.allUsers[i].login === this.user.login && this.allUsers[i].password === this.user.password){
+        window.alert('Welcome ' + this.user.login);
+        this.router.navigate(['/defaultComponent']);
+        this.isUserFound = true;
+        break;
+      }
     }
-    if (this.password === '') {
-      window.alert('The password can not be empty!');
-    }
-    if (this.password === this.passwordConfirmation) {
-      this.isPasswordCorret = true;
+      this.userNotKnown(this.user);
+  }
+  
+  userNotKnown(user: UserSQL){
+    if(!this.isUserFound){
+      window.alert('User '+ user.login+ ' Not Known')
     }
   }
 
@@ -49,12 +59,6 @@ export class NewsignupComponent implements OnInit {
     this.allUsers = users;
 })
   }
-
-  // createUser(newUser: UserSQL): Observable<Object>{
-  //   return newUser;
-  // }
-
-
   ngOnInit(): void {
     this.getUsers();
   }

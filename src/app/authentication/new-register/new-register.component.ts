@@ -24,8 +24,6 @@ export class NewRegisterComponent implements OnInit {
     this.dataValidation();
     if(this.isLogin && this.isPassword && this.isPasswordConfirmation){
       this.checkUser();
-    }else{
-      window.alert("CLICKED")
     }
   }
 
@@ -47,25 +45,23 @@ export class NewRegisterComponent implements OnInit {
     }
 
   checkUser(){  
-    let ifUserExists = true
+    let ifUserExists = false
       for(var i = 0; i < this.allUsers.length; i++){
           if(this.allUsers[i].login === this.user.login){
               window.alert("The user " + this.user.login + " alredy exists")
-              ifUserExists = false;
+              ifUserExists = true;
               break;
             }
       }
 
-      if(ifUserExists){
-          console.log('ifUserExists = '+ ifUserExists)
-          this.createNewUser();
+      if(!ifUserExists){
+        this.createNewUser();
       }
 }
      
   createNewUser( ){
-    console.log('In Method createNewUser')
     this.userService.createUser(this.user).subscribe( data =>{
-      window.alert("User " + this.user.login+ "Created"),
+      window.alert("User " + this.user.login+ " Created"),
       this.router.navigate([''])
     },
     error => window.alert(error));
