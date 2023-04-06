@@ -1,0 +1,39 @@
+
+<body >
+    <div >
+      <h3 class = " text-center">{{ title }}</h3>
+    </div>
+  
+    <form (ngSubmit) = "onSubmit()" >
+  
+      <div class = "col form-group">
+        <label id="id_label"><b>ID: {{id}} </b></label>
+      </div>
+  
+      <div class="row">
+        <div class = " col form-group  mb-3">
+          <label><b>Email</b></label>
+          <input type = "text"  class = "form-control " id = "email"
+            [(ngModel)] = "user.login" name = "email">
+        </div>
+  
+        <div class = " col form-group  mb-3 ">
+            <label><b>Password</b></label>
+            <input type = "text" class = "form-control"  id = "password"
+              [(ngModel)] = "user.password" name = "password">
+        </div>
+  
+        <div class = " col form-group  mb-3">
+          <label><b>Administrator</b></label>
+          <input type = "text" class = "form-control"  id = "admin"
+            [(ngModel)] = "user.isAdmin" name = "admin" placeholder="Yes/No">
+        </div>
+        </div>
+  
+      <button class="btn btn-secondary"   id="btnadd"  type="button" (click)="onSubmit()">Update </button>
+      <button class="btn btn-danger" id="btnadd" type="button" (click)="deleteUser(user.id)" style="margin-left: 1%">Delete </button>
+      <button class="btn btn-primary"   id="btnadd"  type="button" (click)="cancel()"  style="margin-left: 3%" >CANCEL </button>
+    </form> 
+  </body>
+  
+  

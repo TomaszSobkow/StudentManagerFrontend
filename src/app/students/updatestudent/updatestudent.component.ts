@@ -2,7 +2,7 @@ import { dashCaseToCamelCase } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Student } from '../student';
-import { StudentService } from '../services/student.service';
+import { StudentService } from '../../services/student.service';
 
 @Component({
   selector: 'app-updatestudent',
@@ -38,6 +38,10 @@ export class UpdatestudentComponent implements OnInit {
       window.alert('Deleted Student ID'+this.student.id +' '+this.student.firstName + ' ' +this.student.lastName);
       this.goToStudentsList();
     })
+  }
+
+  cancel(){
+  this.goToStudentsList();
   }
 
 

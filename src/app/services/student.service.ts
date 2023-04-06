@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Student } from '../student';
+import { Student } from '../students/student';
 
 
 
@@ -10,7 +10,7 @@ import { Student } from '../student';
 })
 export class StudentService {
 
- private url  = "http://192.168.178.100:8080/api/sm/students";
+ private url  = "http://192.168.178.100:8080/api/students";
 
 
   constructor( private httpClient: HttpClient){ }
@@ -20,20 +20,20 @@ export class StudentService {
   }
 
   createStudent(student: Student): Observable<Object>{
-    return this.httpClient.post(this.url, student);
+    return this.httpClient.post(this.url+'/student', student);
   }
 
   getStudentById(id: number): Observable<Student>{
-    return this.httpClient.get<Student>(`${this.url}/${id}`);
+    return this.httpClient.get<Student>(`${this.url+'/student'}/${id}`);
 
   }
 
   deleteStudent(id: number): Observable<Student>{
-    return this.httpClient.delete<Student>(`${this.url}/${id}`)
+    return this.httpClient.delete<Student>(`${this.url+'/student'}/${id}`)
   }
 
   updateStudent(id: number, student: Student): Observable<Object>{
-    return this.httpClient.put(`${this.url}/${id}`,student)
+    return this.httpClient.put(`${this.url+'/student'}/${id}`,student)
   }
 
 

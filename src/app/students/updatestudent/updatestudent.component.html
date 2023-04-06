@@ -59,9 +59,10 @@
 
 
     </div>
-    <button class="btn btn-info"   id="btnadd"  type="submit" >Update </button>
-    <button class="btn btn-danger" id="btnadd" type="button" (click)="deleteStudent(student.id)" style="margin-left: 6%">Delete </button>
-  </form>
+    <button class="btn btn-secondary"   id="btnadd"  type="button" (click)="onSubmit()">Update </button>
+    <button class="btn btn-danger" id="btnadd" type="button" (click)="deleteStudent(student.id)" style="margin-left: 1%">Delete </button>
+    <button class="btn btn-primary"   id="btnadd"  type="button" (click)="cancel()"  style="margin-left: 3%" >CANCEL </button>
+  </form> 
 
 
   <!-- <form>
