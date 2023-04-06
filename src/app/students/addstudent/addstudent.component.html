@@ -5,59 +5,52 @@
 
         <div class="row">
           <div class = " col form-group  mb-3">
-            <label>First Name</label>
             <i class="fa fa-user-tie" ></i>
-            <input type = "text"  class = "form-control " id = "firstName"
+            <input name="firstname" type = "text"  class = "form-control form-control-sm mb-3 " placeholder="first Name"
               [(ngModel)] = "student.firstName" name = "firstName">
           </div>
 
           <div class = " col form-group  mb-3 ">
-              <label>Last Name</label>
-              <i class="fa fa-user" ></i>
-              <input type = "text" class = "form-control"  id = "LastName"
+            <i class="fa fa-user" ></i>
+            <input name="lastName type" type ="text" class = "form-control form-control-sm mb-3" placeholder="Last Name"
                 [(ngModel)] = "student.lastName" name = "LastName">
           </div>
 
           <div class = " col form-group  mb-3">
-            <label>Address</label>
             <i class="fa fa-landmark" ></i>
-            <input type = "text" class = "form-control"  id = "address"
+            <input   name="login" class="form-control form-control-sm mb-3" placeholder="Address" 
               [(ngModel)] = "student.address" name = "address">
           </div>
 
           <div class = " col form-group  mb-3 ">
-            <label>Town</label>
             <i class="fa fa-home" ></i>
-            <input type = "text" class = "form-control"  id = "town"
+            <input type = "text" class = "form-control form-control-sm mb-3"  name = "town" placeholder="Town"
               [(ngModel)] = "student.town" name = "town">
         </div>
 
         <div class="row">
           <div class = " col form-group  mb-3">
-            <label>County</label>
             <i class="fa fa-globe" ></i>
-            <input type = "text"  class = "form-control " id = "county"
+            <input type = "text"  class = "form-control form-control-sm mb-3" name = "county" placeholder="County"
               [(ngModel)] = "student.county" name = "county">
           </div>
 
           <div class = " col form-group  mb-3">
-            <label>Email</label>
             <i class="fa fa-envelope" ></i>
-            <input type = "text" class = "form-control"  id = "emailId"
+            <input type = "text" class = "form-control form-control-sm mb-3 "  name = "emailId" placeholder="Email"
               [(ngModel)] = "student.email" name = "emailId">
           </div>
 
           <div class = " col form-group  mb-3">
-            <label>Phone</label>
             <i class="fa fa-phone" ></i>
-            <input type = "text" class = "form-control"  id = "phone"
+            <input type = "text" class = "form-control form-control-sm mb-3 "  name = "phone" placeholder="Phone"
               [(ngModel)] = "student.phone" name = "phone">
           </div>
 
         </div>
       </div>
-      <button class="btn btn-success" id = "btnadd"  type="submit" >Add Student</button>
-      <button class="btn btn-primary"   id="btnadd"  type="button" (click)="cancel()"  style="margin-left: 3%" >CANCEL </button>
+      <button class="btn btn-secondary btn-sm" id = "btnadd"  type="submit" >Add Student</button>
+      <button class="btn btn-dark btn-sm"   id="btnadd"  type="button" (click)="cancel()"  style="margin-left: 3%" >CANCEL </button>
     </form>
   </div>
 </body>
