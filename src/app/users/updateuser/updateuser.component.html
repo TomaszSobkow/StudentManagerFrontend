@@ -12,27 +12,29 @@
   
       <div class="row">
         <div class = " col form-group  mb-3">
-          <label><b>Email</b></label>
-          <input type = "text"  class = "form-control " id = "email"
+          <label>Email</label>
+          <input type = "text"  class = "form-control form-control-sm mb-3" name = "email"
             [(ngModel)] = "user.login" name = "email">
         </div>
   
         <div class = " col form-group  mb-3 ">
-            <label><b>Password</b></label>
-            <input type = "text" class = "form-control"  id = "password"
+            <label>Password</label>
+            <input type = "text" class = "form-control form-control-sm mb-3"  name = "password"
               [(ngModel)] = "user.password" name = "password">
         </div>
   
         <div class = " col form-group  mb-3">
-          <label><b>Administrator</b></label>
-          <input type = "text" class = "form-control"  id = "admin"
+          <label>Administrator</label>
+          <input type = "text" class = "form-control form-control-sm mb-3"  name = "admin"
             [(ngModel)] = "user.isAdmin" name = "admin" placeholder="Yes/No">
         </div>
         </div>
   
-      <button class="btn btn-secondary"   id="btnadd"  type="button" (click)="onSubmit()">Update </button>
-      <button class="btn btn-danger" id="btnadd" type="button" (click)="deleteUser(user.id)" style="margin-left: 1%">Delete </button>
-      <button class="btn btn-primary"   id="btnadd"  type="button" (click)="cancel()"  style="margin-left: 3%" >CANCEL </button>
+      <button class="btn btn-secondary btn-sm"   id="btnadd"  type="button" (click)="onSubmit()">Update </button>
+      
+      <button class="btn btn-dark btn-sm"   id="btnadd"  type="button" (click)="cancel()"  style="margin-left: 1%" >Cancel </button>
+     <button class="btn btn-danger btn-sm" id="btnadd" type="button" (click)="deleteUser(user.id)" style="margin-left: 4%">Delete </button>
+     
     </form> 
   </body>
   
