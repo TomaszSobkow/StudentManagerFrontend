@@ -1,7 +1,5 @@
 
 import { DefaultComponent } from './dashboard/layouts/default/default.component';
-import { RegisterComponent } from './authentication/register/register.component';
-import { SignupComponent } from './authentication/signup/signup.component';
 import { UpdatestudentComponent } from './students/updatestudent/updatestudent.component';
 import { ListofstudentsComponent } from './students/listofstudents/listofstudents.component';
 import { NgModule } from '@angular/core';
