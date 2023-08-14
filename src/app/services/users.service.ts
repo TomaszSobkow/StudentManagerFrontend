@@ -8,7 +8,7 @@ import { UserSQL } from '../users/userSQL';
 })
 export class UsersService {
 
-  private url  = "http://192.168.178.100:8080/api/users";
+  private url  = "https://192.168.178.100:8080/api/users";
 
 
   constructor( private httpClient: HttpClient){ }
