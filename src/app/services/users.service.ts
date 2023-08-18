@@ -10,7 +10,6 @@ export class UsersService {
 
   private url  = "https://192.168.178.100:8080/api/users";
 
-
   constructor( private httpClient: HttpClient){ }
 
   getUsersList(): Observable<UserSQL[]>{
