@@ -8,7 +8,7 @@ import { UserSQL } from '../users/userSQL';
 })
 export class UsersService {
 
-  private url  = "https://fcrbiqj7t1xdco0b.myfritz.net:8080/api/users";
+  private url  = "http://fcrbiqj7t1xdco0b.myfritz.net:8080/api/users";
 
   constructor( private httpClient: HttpClient){ }
 
