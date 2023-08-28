@@ -39,7 +39,6 @@ export class NewsignupComponent implements OnInit {
   checkUser(){
     for(let i = 0; i < this.allUsers.length; i++){
       if(this.allUsers[i].login === this.user.login && this.allUsers[i].password === this.user.password){
-        window.alert('Welcome ' + this.user.login);
         this.router.navigate(['/defaultComponent']);
         this.isUserFound = true;
         break;
