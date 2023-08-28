@@ -33,7 +33,6 @@ export class RegisterService {
 
     if(this.isFreeUserName){
       this.users.push(new User(userName, userPassword));
-      window.alert('Added New User ' + userName );
       this.router.navigate([''])
     }
   }
