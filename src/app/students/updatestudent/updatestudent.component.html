@@ -3,7 +3,7 @@
     <h4 class = " text-center">{{ title }}</h4>
   </div>
 
-  <form (ngSubmit) = "onSubmit()" >
+  <form (ngSubmit) = "update()" >
 
     <div class = "col form-group">
       <label id="id_label"><b>ID: {{id}} </b></label>
@@ -53,13 +53,13 @@
           [(ngModel)] = "student.phone" name = "phone">
       </div>
 
-    </div> 
+    </div>
    </div>
-    <button class="btn btn-secondary btn-sm"   id="btnadd"  type="button" (click)="onSubmit()">Update </button>
+    <button class="btn btn-secondary btn-sm"   id="btnadd"  type="button" (click)="update()">Update </button>
     <button class="btn btn-dark btn-sm"   id="btnadd"  type="button" (click)="cancel()"  style="margin-left: 1%" >Cancel </button>
     <button class="btn btn-danger btn-sm" id="btnadd" type="button" (click)="deleteStudent(student.id)" style="margin-left: 4%">Delete </button>
-    
-  </form> 
+
+  </form>
 
 
   <!-- <form>

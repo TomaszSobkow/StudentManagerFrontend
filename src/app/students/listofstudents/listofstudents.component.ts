@@ -9,6 +9,7 @@ import { StudentService } from '../../services/student.service';
   styleUrls: ['./listofstudents.component.css']
 })
 export class ListofstudentsComponent implements OnInit {
+  
   constructor(private studentService: StudentService, private router: Router ) {  }
 
   title =  "List of students";

@@ -20,7 +20,7 @@ export class UpdatestudentComponent implements OnInit {
               private rout:  ActivatedRoute,
               private router : Router) { }
 
-  onSubmit(){
+  update(){
     this.updateStudent();
     window.alert('Edited student ' + this.student.firstName+ ' ' +this.student.lastName)
     this.goToStudentsList();
