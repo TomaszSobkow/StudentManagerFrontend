@@ -1,4 +1,3 @@
-import { dashCaseToCamelCase } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Student } from '../student';
@@ -15,6 +14,7 @@ export class UpdatestudentComponent implements OnInit {
   title = 'Update Student';
   id!: number;
   student!: Student;
+  displayDialog: boolean = false;
 
   constructor(private studentService: StudentService,
               private rout:  ActivatedRoute,
@@ -22,6 +22,7 @@ export class UpdatestudentComponent implements OnInit {
 
   update(){
     this.updateStudent();
+    this.displayDialog = true;
     window.alert('Edited student ' + this.student.firstName+ ' ' +this.student.lastName)
     this.goToStudentsList();
   };

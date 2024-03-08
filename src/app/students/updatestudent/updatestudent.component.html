@@ -52,14 +52,24 @@
         <input type = "text" class = "form-control form-control-sm mb-3"  name = "phone" placeholder="Phone"
           [(ngModel)] = "student.phone" name = "phone">
       </div>
+          <a *ngIf="displayDialog; then display"></a>
+      <ng-template #display>
+        <app-dialog ></app-dialog>
+      </ng-template>
 
     </div>
+
    </div>
     <button class="btn btn-secondary btn-sm"   id="btnadd"  type="button" (click)="update()">Update </button>
     <button class="btn btn-dark btn-sm"   id="btnadd"  type="button" (click)="cancel()"  style="margin-left: 1%" >Cancel </button>
     <button class="btn btn-danger btn-sm" id="btnadd" type="button" (click)="deleteStudent(student.id)" style="margin-left: 4%">Delete </button>
 
   </form>
+
+
+
+
+
 
 
   <!-- <form>

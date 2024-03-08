@@ -14,18 +14,20 @@ import { NewRegisterComponent } from './authentication/new-register/new-register
 import { ListofusersComponent } from './users/listofusers/listofusers.component';
 import { UpdateuserComponent } from './users/updateuser/updateuser.component';
 import { NewsignupComponent } from './authentication/newsignup/newsignup.component';
-import { ErrorDialogComponent } from './error-dialog/error-dialog.component';
+
+
 
 
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
     NewRegisterComponent,
     ListofusersComponent,
     UpdateuserComponent,
     NewsignupComponent,
-    ErrorDialogComponent,   
+
+
    ],
   imports: [
     BrowserModule,

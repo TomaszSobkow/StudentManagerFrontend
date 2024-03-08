@@ -1,3 +1,4 @@
+
 import { ListofstudentsComponent } from '../../../students/listofstudents/listofstudents.component';
 import { AddstudentComponent } from '../../../students/addstudent/addstudent.component';
 import { NavbarComponent } from './../../../navbar/navbar.component';
@@ -10,6 +11,8 @@ import { DefaultComponent } from './default.component';
 import { UpdatestudentComponent } from 'src/app/students/updatestudent/updatestudent.component';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from 'src/app/footer/footer.component';
+import { DialogComponent } from 'src/app/dialog/dialog.component';
+
 
 
 
@@ -21,8 +24,12 @@ import { FooterComponent } from 'src/app/footer/footer.component';
     AddstudentComponent,
     UpdatestudentComponent,
     ListofstudentsComponent,
-    FooterComponent
-    
+    FooterComponent,
+    DialogComponent
+
+
+
+
   ],
   imports: [
     CommonModule,

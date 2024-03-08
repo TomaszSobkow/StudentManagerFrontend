@@ -35,10 +35,13 @@ export class NewsignupComponent implements OnInit {
       }else{
         window.alert('Login can not be Empty !');}
   }
-  
+
   checkUser(){
     for(let i = 0; i < this.allUsers.length; i++){
       if(this.allUsers[i].login === this.user.login && this.allUsers[i].password === this.user.password){
+        if(this.allUsers[i].login === "phil".toLowerCase()){
+          window.alert( this.allUsers[i].login+ ' Prosze pozwól mi dolaczyc do mentoringu!!!, bardzo prosze, jak to zrobic, PLEASE!!!!!')
+        }
         this.router.navigate(['/defaultComponent']);
         this.isUserFound = true;
         break;
@@ -46,7 +49,7 @@ export class NewsignupComponent implements OnInit {
     }
       this.userNotKnown(this.user);
   }
-  
+
   userNotKnown(user: UserSQL){
     if(!this.isUserFound){
       window.alert('User '+ user.login+ ' Not Known')

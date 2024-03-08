@@ -7,6 +7,7 @@ import { UserSQL } from '../users/userSQL';
 import { UsersService } from '../services/users.service';
 
 
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -16,10 +17,10 @@ export class DashboardComponent implements OnInit {
 
     title = 'DashBoard Component'
 
-    noOfUsers : number = 0; 
+    noOfUsers : number = 0;
     students: Student[] = [] ;
     users: UserSQL[]=[];
-    
+
   constructor( private registerService: RegisterService, private studentService: StudentService, private userService: UsersService ) { }
 
   ngOnInit(): void {

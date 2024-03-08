@@ -24,7 +24,7 @@ const routes: Routes = [
        { path: 'addstudent', component: AddstudentComponent },
        { path: 'users', component: ListofusersComponent},
        { path: 'users/user/:id', component: UpdateuserComponent},
-       
+
       ]},
   ];
 
